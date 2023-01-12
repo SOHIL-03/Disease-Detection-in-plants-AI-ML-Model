@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+
+</head>
+<body>
+
+
+<header>
+
+
+
+    <div class="header-2">
+
+        <a href="#" class="logo"> <i class="fas fa-seedling"></i> Plant Saver </a>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </div>
+
+    <div class="header-3">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#Hello">options</a>
+            <a href="#category">category</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+
+<section class="home" id="home">
+
+    <div class="swiper-container home-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="box" style="background: url(https://media.istockphoto.com/vectors/leaves-icon-vector-stock-illustration-leaf-shapes-collection-vector-id1297289504?k=20&m=1297289504&s=612x612&w=0&h=YOLe48701N3gV46CMg3qmjIi7w1GUJ-rekKMIAjsrQc=);">
+                    <div class="content">
+                        <span>Save Plants</span>
+                        <h3>Plant Disease Detection</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box" style="background: url(https://media.istockphoto.com/vectors/autumn-leaves-set-vector-id1180728919?k=20&m=1180728919&s=612x612&w=0&h=nTpKyU2XFx-CU2cnpzGshz_n9_4bIwqHhR4cXrRUtsY=);">
+                    <div class="content">
+                        <span>Technocratic World</span>
+                        <h3>Leaves can be used to detect diseases</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box" style="background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTksxyoj3HWvB0REosvjz6Uge1Kw4lC1p1wkTtvEzs_CVbKjoWdNv-mlNu9RehNbxFY9k&usqp=CAU);">
+                    <div class="content">
+                        <h3>Save Plants Save Lifes</h3>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+
+
+<section class="banner-container" id = "Hello">
+
+    <div class="banner">
+        <img src="{{ url_for('static',filename='banner1.jpg')}}" alt="">
+        <div class="content">
+            <h3>Predict Image</h3>
+            <a href="\Image" class="btn">Open Camera</a>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="{{ url_for('static',filename='banner2.jpg')}}" alt="">
+        <div class="content">
+            <h3>Upload image</h3>
+            <a href="\uploadimage" class="btn">Upload</a>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="category" id="category">
+
+<h1 class="heading"> Category of Plants </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="https://media.istockphoto.com/photos/red-apples-picture-id187048681?k=20&m=187048681&s=612x612&w=0&h=UX8hR0qRoqo79VdJ-6n_ddk1iTt6WoNnHMth4Q0ymXY=" alt="">
+        <div class="content">
+            <h3>Apple</h3>
+            
+            <a href="\apple" class="btn">Detect</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLVpjyzE5jtQacvzKff9RKJmJ7-kk5Os9KL5yH2O3ZlcqXwUQFf7UF1GOExUZLoZDstdk&usqp=CAU" alt="">
+        <div class="content">
+            <h3>BlueBerry</h3>
+            <a href="\BlueBerry" class="btn">Detect</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://media.istockphoto.com/photos/closeup-of-ripening-bing-cherries-on-tree-picture-id1226815962?s=612x612" alt="">
+        <div class="content">
+            <h3>Cherry</h3>
+            <a href="\Cherry" class="btn">Detect</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbSMkJH_X4ZJeAQ0WORpdGoo2Tu7_xg_ONMqCuK6Hxw6Qke2AVGYTsCMqFImPwGZ_Ce4w&usqp=CAU" alt="">
+        <div class="content">
+            <h3>Corn</h3>
+            <a href="\Corn" class="btn">Detect</a>
+        </div>
+    </div>
+
+
+</div>
+
+</section>
+
+
+<section class="category" id="category">
+
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="https://media.istockphoto.com/photos/french-red-and-rose-wine-grapes-plant-growing-on-ochre-mineral-soil-picture-id1134470358?k=20&m=1134470358&s=612x612&w=0&h=PTdr6uVNLBFslZsr_Z1sjmS5zy-sgDMRCttfYqWSn2w=" alt="">
+        <div class="content">
+            <h3>Grapes</h3>
+            <a href="\Grapes" class="btn">Detect</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://cdn.shopify.com/s/files/1/2045/8185/products/9447701_grande.png?v=1614188511" alt="">
+        <div class="content">
+            <h3>Orange</h3>
+            <a href="\Orange" class="btn">Detect</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://www.aces.edu/wp-content/uploads/2021/02/pic1-e1614198774984.jpg" alt="">
+        <div class="content">
+            <h3>Peach</h3>
+            <a href="\Peach" class="btn">Detect</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://media.istockphoto.com/photos/bell-pepper-picture-id530253685?b=1&k=20&m=530253685&s=170667a&w=0&h=NUE7sToLJa0hwRtHboVGWC1yLNB0k6LZ_wBSjvlBHeU=" alt="">
+        <div class="content">
+            <h3>Bell Pepper</h3>
+            <a href="\Pepper" class="btn">Detect</a>
+        </div>
+    </div>
+
+
+</div>
+
+</section>
+
+<section class="category" id="category">
+
+
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="https://image.shutterstock.com/image-photo/branch-ripe-raspberries-garden-260nw-767067436.jpg" alt="">
+        <div class="content">
+            <h3>Rasberry</h3>
+            <a href="\Rasberry" class="btn">Detect</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://media.istockphoto.com/photos/potatoes-in-the-field-picture-id1220924272?b=1&k=20&m=1220924272&s=170667a&w=0&h=UeKo4erOnX0r1cQDDlbCKb_MLjFy_QWz38YmbcxA5qU=" alt="">
+        <div class="content">
+            <h3>Potato</h3>
+            <a href="\Potato" class="btn">Detect</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://image.shutterstock.com/image-photo/green-organic-soya-bean-agriculture-260nw-1808221240.jpg" alt="">
+        <div class="content">
+            <h3>Soyabean</h3>
+            <a href="\Soyabean" class="btn">Detect</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="https://image.shutterstock.com/image-photo/butternut-squash-growing-garden-organic-260nw-1902393652.jpg" alt="">
+        <div class="content">
+            <h3>Squash</h3>
+            <a href="\Squash" class="btn">Detect</a>
+        </div>
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+
+<section class="icons-container">
+
+    <div class="icon">
+        <img src="images/icon1.png" alt="">
+        <div class="content">
+            <h3>Free Use</h3>
+            <p>Free and usable anytime</p>
+        </div>
+    </div>
+    <div class="icon">
+        <img src="images/icon2.png" alt="">
+        <div class="content">
+            <h3>Picture Detection </h3>
+            <p>Image detecting model</p>
+        </div>
+    </div>
+    <div class="icon">
+        <img src="images/icon3.png" alt="">
+        <div class="content">
+            <h3>User friendly</h3>
+            <p>accurate usage</p>
+        </div>
+    </div>
+    <div class="icon">
+        <img src="images/icon4.png" alt="">
+        <div class="content">
+            <h3>Support 24/7</h3>
+            <p>Use any time</p>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+<section class="contact" id="contact">
+
+<h1 class="heading">get in touch</h1>
+
+<div class="row">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.175134961477!2d76.65758911512631!3d30.516086481713128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1667632688799!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <form action="">
+
+        <div class="inputBox">
+            <input type="text" required>
+            <label>name</label>
+        </div>
+        <div class="inputBox">
+            <input type="email" required>
+            <label>email</label>
+        </div>
+        <div class="inputBox">
+            <input type="number" required>
+            <label>number</label>
+        </div>
+        <div class="inputBox">
+            <textarea required name="" id="" cols="30" rows="10"></textarea>
+            <label>message</label>
+        </div>
+
+        <input type="submit" value="send message" class="btn">
+
+    </form>
+
+</div>
+
+</section>
+
+
+
+
+
+<a href="#home" class="scroll-top fas fa-angle-up"></a>
+
+
+<div class="header-1">
+
+    <div class="share">
+        <span> follow us : </span>
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+    </div>
+
+    <div class="call">
+        <span> call us : </span>
+        <a href="#">+916283362481</a>
+    </div>
+
+</div>
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script src="{{ url_for('static',filename='script.js')}}"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+body{
+  background: lightgreen;
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+}
+button{
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+  text-decoration: underline;
+}

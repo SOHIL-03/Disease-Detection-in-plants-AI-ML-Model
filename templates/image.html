@@ -1,0 +1,238 @@
+<!doctype html>
+
+<head>
+    <style>
+    /* CSS comes here */
+    body {
+      background-image: url('https://freedesignfile.com/upload/2020/09/Green-leaf-background-vector.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+}
+    #video {
+      float:left;
+        border: 1px solid black;
+        width: 40vw;
+        height: 60vh;
+
+    }
+
+    #photo {
+      float:right;
+        border: 1px solid black;
+        width: 40vw;
+        height: 60vh;
+
+    }
+
+    #canvas {
+        display: none;
+    }
+
+    .camera {
+        width: 340px;
+        display: inline-block;
+    }
+
+    .output {
+        width: 340px;
+        display: inline-block;
+
+    }
+    .wrapper{
+      width: 90%;
+      height: 60vh;
+      display: flex;
+      margin-left: 5vw;
+      align-items: center;
+      justify-content: space-between;
+      /* padding:0 10vw 0 10vw */
+
+    }
+
+    #startbutton {
+        display:flex ;
+        position: absolute;
+        margin-left:center;
+        margin-right: center;
+        margin-bottom:1px;
+        bottom: 36px;
+        border-radius: 6px;
+        padding: 60px 150px 60px 150px;
+        background-color: green;
+        /* align-items: center; */
+        border: none;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 1.0);
+        cursor: pointer;
+    }
+    #start {
+        display:flex ;
+        position: absolute;
+        margin-left:center;
+        margin-right: center;
+        margin-bottom:1px;
+        bottom: 36px;
+        border-radius: 6px;
+        padding: 60px 150px 60px 150px;
+        background-color: green;
+        align-items: center;
+        border: none;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 1.0);
+        cursor: pointer;
+    }
+    #Predict{
+      display:flex ;
+      position: absolute;
+      margin-left:center;
+      margin-right: center;
+      margin-bottom:1px;
+      bottom: 36px;
+      border-radius: 6px;
+      padding: 60px 150px 60px 150px;
+      background-color: green;
+      align-items: center;
+      border: none;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 1.0);
+      cursor: pointer;
+
+    }
+
+    .contentarea {
+        font-size: 16px;
+        font-family: Arial;
+    }
+    .btn-container{
+      width: 100%;
+      display: flex;
+      align-items: center;
+    justify-content: center;   }
+    </style>
+    <title>TREE DETECTION</title>
+
+</head>
+<body class = "Hello">
+
+
+    <div class="contentarea">
+        <h1>
+            TREE IMAGE
+        </h1>
+      <div class="wrapper">
+
+      <div class="camera-container">
+
+
+        <div class="camera">
+            <video id="video">Video stream not available.</video>
+        </div>
+
+      </div>
+
+
+        <canvas id="canvas"></canvas>
+
+
+        <div class="output">
+            <img id="photo" alt="The screen capture will appear in this box.">
+        </div>
+
+        </div>
+          <div class="btn-container"><button id="startbutton">Take photo</button></div>
+
+          <br>
+
+
+        
+
+    </div>
+
+
+    <script>
+    /* JS comes here */
+    (function() {
+
+        var width = 320; // We will scale the photo width to this
+        var height = 0; // This will be computed based on the input stream
+
+        var streaming = false;
+
+        var video = null;
+        var canvas = null;
+        var photo = null;
+        var startbutton = null;
+
+        function startup() {
+            video = document.getElementById('video');
+            canvas = document.getElementById('canvas');
+            photo = document.getElementById('photo');
+            startbutton = document.getElementById('startbutton');
+
+            navigator.mediaDevices.getUserMedia({
+                    video: true,
+                    audio: false
+                })
+                .then(function(stream) {
+                    video.srcObject = stream;
+                    video.play();
+                })
+                .catch(function(err) {
+                    console.log("An error occurred: " + err);
+                });
+
+            video.addEventListener('canplay', function(ev) {
+                if (!streaming) {
+                    height = video.videoHeight / (video.videoWidth / width);
+
+                    if (isNaN(height)) {
+                        height = width / (4 / 3);
+                    }
+
+                    video.setAttribute('width', width);
+                    video.setAttribute('height', height);
+                    canvas.setAttribute('width', width);
+                    canvas.setAttribute('height', height);
+                    streaming = true;
+                }
+            }, false);
+
+            startbutton.addEventListener('click', function(ev) {
+                takepicture();
+                ev.preventDefault();
+            }, false);
+
+            clearphoto();
+        }
+
+
+        function clearphoto() {
+            var context = canvas.getContext('2d');
+            context.fillStyle = "#AAA";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            var data = canvas.toDataURL('image/png');
+            photo.setAttribute('src', data);
+        }
+
+        function takepicture() {
+            var context = canvas.getContext('2d');
+            if (width && height) {
+                canvas.width = width;
+                canvas.height = height;
+                context.drawImage(video, 0, 0, width, height);
+
+                var data = canvas.toDataURL('image/png');
+                photo.setAttribute('src', data);
+            } else {
+                clearphoto();
+            }
+        }
+
+        window.addEventListener('load', startup, false);
+    })();
+    </script>
+</body>
+
+</html>
