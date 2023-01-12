@@ -80,11 +80,6 @@ def home():
 def main():
     return render_template('/uploadimage.html')
 
-# @app.route('/uploadimage')
-# def uploadimage():
-    
-#     return render_template("/uploadimage.html")
-
 @app.route('/Image')
 def Image():
     return render_template("/image.html")
