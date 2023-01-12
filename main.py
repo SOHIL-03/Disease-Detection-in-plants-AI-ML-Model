@@ -1,3 +1,6 @@
+# Download Data set and model from -> https://drive.google.com/drive/folders/1mmQ8qVRLhxxgIG1qCWIAsDNwyb6xa4fQ?usp=share_link
+
+
 from flask import *
 from werkzeug.utils import secure_filename
 from tensorflow.keras.applications.inception_v3 import preprocess_input
