@@ -1,6 +1,8 @@
 Download Data set and model from -> https://drive.google.com/drive/folders/1mmQ8qVRLhxxgIG1qCWIAsDNwyb6xa4fQ?usp=share_link
 
 
+DataSet -> Number of Classes -> 39
+
 
 
 Python version -> Python 3.11.6
