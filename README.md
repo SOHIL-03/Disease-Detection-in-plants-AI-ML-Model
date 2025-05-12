@@ -9,12 +9,12 @@ Python version -> Python 3.11.6
 
 
 Keep all these in one directory:
--> static
--> templates
--> test
--> main.py
--> Trained_final.h5
--> Training.ipynb
+-> static\n
+-> templates\n
+-> test\n
+-> main.py\n
+-> Trained_final.h5\n
+-> Training.ipynb\n
 
 
 
