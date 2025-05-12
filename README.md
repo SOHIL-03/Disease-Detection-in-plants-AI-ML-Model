@@ -9,12 +9,12 @@ Python version -> Python 3.11.6
 
 
 Keep all these in one directory:
--> static\n
--> templates\n
--> test\n
--> main.py\n
--> Trained_final.h5\n
--> Training.ipynb\n
+- `static/` — Contains static assets like CSS, JS, and image files.
+- `templates/` — Contains HTML templates for rendering the frontend (e.g., Flask or Streamlit).
+- `test/` — Directory for test scripts and datasets.
+- `main.py` — Main entry point of the application.
+- `Trained_final.h5` — Trained machine learning model file.
+- `Training.ipynb` — Notebook used for training the model.
 
 
 
