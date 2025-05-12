@@ -19,4 +19,12 @@ Keep all these in one directory:
 
 
 
-COMMAND to run -> python main.py
+## Getting Started
+
+1. Clone or download the project.
+2. Make sure all files and folders listed above are in the same directory.
+3. Install dependencies (e.g., via `requirements.txt` if provided).
+4. Run the application:
+
+```bash
+python main.py
